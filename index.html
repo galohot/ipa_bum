@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Kementerian Luar Negeri RI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-navy-50: #F0F2F7;
+            --color-navy-500: #3C59A7;
+            --color-navy-600: #304786;
+            --color-navy-700: #243564;
+            --color-red-500: #EF4444;
+            --color-gold-500: #F59E0B;
+            --color-green-500: #22C55E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background-color: var(--color-navy-50);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .header {
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .title-section {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .main-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--color-navy-700);
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Merriweather', serif;
+            font-size: 1.125rem;
+            color: #4a5568;
+            max-width: 1200px;
+            line-height: 1.75;
+        }
+
+        .dashboard-container {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in;
+            width: 100%;
+            height: calc(100vh - 250px);
+            min-height: 1080px;
+            overflow: hidden;
+        }
+
+        .iframe-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .iframe-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-10px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 1920px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .dashboard-container {
+                height: calc(100vh - 200px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .dashboard-container {
+                padding: 0.5rem;
+                height: calc(100vh - 180px);
+            }
+
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .logo {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="https://drive.usercontent.google.com/download?id=1NY5Ncxw9q2zWS5OH2QAMVbkzKDJT4wl0&authuser=0" alt="Logo Kementerian Luar Negeri RI" class="logo">
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="title-section">
+            <h1 class="main-title">Dashboard Kementerian Luar Negeri</h1>
+            <p class="subtitle">
+                Kegiatan Sosialisasi Keputusan Menteri Luar Negeri Nomor
+                21/B/PL/08/2024/01 tentang lndikator Kinerja Tahunan Pengelolaan
+                Barang Milik Negara pada Satuan Kerja Kementerian Luar Negeri dan
+                Perwakilan Republik Indonesia dan Self-assessment Perhitungan Kertas
+                Kerja Satker Pusat dan Perwakilan
+            </p>
+        </section>
+
+        <section class="dashboard-container">
+            <div class="iframe-wrapper">
+                <iframe 
+                    src="https://lookerstudio.google.com/embed/reporting/a3496513-b8cd-44f9-b0a0-1491c36421c0/page/NbSXE" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+                </iframe>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
